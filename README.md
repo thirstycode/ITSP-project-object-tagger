@@ -9,8 +9,8 @@ Gives Output To *Motor "Where" To Move By Feeding Position From Live Video
 1. pip install -r requirements.txt
 ```
 
-<br>
 #### Execute It:
+
 ```bash
 1. python itsp.py
 ```
