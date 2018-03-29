@@ -10,4 +10,11 @@ Gives Output To *Motor "Where" To Move By Feeding Position From Live Video
 ```
 
 <br>
-#TODO
+#### Execute It:
+```bash
+1. python itsp.py
+```
+<br>
+Based On OpenCV, It Manipulates The Frame In Video And Then Processes It By Creating Panorama.
+<br>
+Panorama Is Being Created By New Frames So To Avoid Overneeded Use Of CPU
