@@ -1,3 +1,4 @@
+# importing modules
 import cv2
 import time
 import numpy as np
@@ -8,7 +9,7 @@ from config import range
 xcor,ycor = -1,-1
 initial_frame = 0
 frame1_count = 0
-# mouse callback function
+# <---------- mouse callback function ----------------
 def fetch_coord(event,x,y,flags,param):
     global xcor,ycor,initial_frame,frame1_count
     xcor,ycor = x,y
@@ -17,6 +18,7 @@ img = np.zeros((512,512,3), np.uint8)
 cv2.namedWindow("Click 'c' To Give Coordinates! 'q' to Close")
 cv2.setMouseCallback("Click 'c' To Give Coordinates! 'q' to Close",fetch_coord)
 
+# <--------------starting video capture into frames---------
 vid = cv2.VideoCapture(0)
 
 while True:
@@ -33,6 +35,7 @@ while True:
         if frame_paro.shape[1] - range < frame1.shape[1] + xcor < frame_paro.shape[1] + range :
             print("no output , target is in range ")
         else :
+#<---------------machine output till condition is satisfied
             output.output()
 
 
