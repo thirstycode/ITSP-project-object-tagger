@@ -3,6 +3,7 @@ import time
 import numpy as np
 from supporting_files import stitch
 from supporting_files import output
+from config import range
 
 xcor,ycor = -1,-1
 initial_frame = 0
@@ -29,7 +30,7 @@ while True:
             frame1_count = 0
 
         frame_paro = stitch.stitch(frame_paro,frame)
-        if frame_paro.shape[1] - 50 < frame1.shape[1] + xcor < frame_paro.shape[1] + 50 :
+        if frame_paro.shape[1] - range < frame1.shape[1] + xcor < frame_paro.shape[1] + range :
             print("no output , target is in range ")
         else :
             output.output()
